@@ -25,7 +25,3 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-    text_var:
-      type: text
-      label: PLUGIN_LASEREGG.TEXT_VARIABLE
-      help: PLUGIN_LASEREGG.TEXT_VARIABLE_HELP

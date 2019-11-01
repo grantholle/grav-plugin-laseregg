@@ -47,10 +47,11 @@ class LasereggPlugin extends Plugin
         $this->device = $uri->query('device');
 
         if ($route && $route == $uri->path() && $this->key && $this->device) {
-            // Enable the main event we are interested in
-            $this->enable([
-                'onPageContentRaw' => ['onPageContentRaw', 0]
-            ]);
+            header('Content-type: application/json');
+
+            echo Response::get("https://api.origins-china.cn/v1/lasereggs/{$this->device}?key={$this->key}");
+
+            exit();
         }
     }
 
